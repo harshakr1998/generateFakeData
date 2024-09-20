@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Data Generator</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/faker@5.5.3/dist/faker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/images/apple-touch-icon.png" alt="Logo" style="width: 40px;"> Simple Fake Data Generator
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://harshakr1998.github.io" target="_blank">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/harshakr1998" target="_blank">Github Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://harshakr1998.github.io/automationPractice" target="_blank">Automation Practice Site</a>
+              </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:harsharobo222@gmail.com">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Main Content -->
+    <div class="container my-4">
+      <h2 class="text-center">Generate Fake Data Easily</h2>
+  
+      <!-- User-friendly form with enhanced UI -->
+      <div class="form-container mt-4">
+        <form id="dataForm">
+          <div id="fieldContainer">
+            <!-- First data field with remove button -->
+            <div class="row mb-3">
+              <div class="col-md-8">
+                <label for="dataType" class="form-label">Select Data Type</label>
+                <select class="form-select dataType">
+                  <option value="name">Name</option>
+                  <option value="email">Email</option>
+                  <option value="address">Address</option>
+                  <option value="phone">Phone Number</option>
+                  <option value="company">Company Name</option>
+                  <option value="date">Date</option>
+                  <option value="internet">Username</option>
+                </select>
+              </div>
+              <div class="col-md-2 align-self-end">
+                <button type="button" class="btn btn-danger" onclick="removeField(this)">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <button type="button" class="btn gradient-button" onclick="addField()">Add Another</button>
+          </div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="10">
+          </div>
+          <button type="button" class="btn gradient-button" onclick="generateData()">Generate Data</button>
+        </form>
+      </div>
+  
+      <!-- Generated Data Output -->
+    <div class="data-output-container">
+      <h3>Generated Data</h3>
+      <pre id="output"></pre>
+    </div>
+
+    <!-- Buttons outside the data container -->
+    <div class="d-flex justify-content-between mt-3">
+      <button class="btn btn-success" onclick="copyToClipboard()">Copy to Clipboard</button>
+      <button class="btn btn-info" onclick="downloadData('json')">Download as JSON</button>
+      <button class="btn btn-info" onclick="downloadData('csv')">Download as CSV</button>
+      <button class="btn btn-info" onclick="downloadData('excel')">Download as Excel</button>
+    </div>
+  </div>
+  
+    <!-- Footer -->
+    <footer class="text-center">
+      <p>Check out my <a href="https://github.com/harshakr1998" target="_blank">Github</a> profile !</p>
+      <p>Think we can improve this site?, Contact <a href="mailto:harsharobo222@gmail.com">Me!</a></p>
+    </footer>
+
+  <!-- JavaScript -->
+  <script src="/js/scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

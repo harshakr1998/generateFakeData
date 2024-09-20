@@ -1,0 +1,39 @@
+ /* Gradient background for the navbar */
+ .navbar {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  }
+  /* Footer styling */
+  footer {
+    background-color: #212529;
+    color: rgb(252, 252, 252);
+    padding: 10px 0;
+  }
+  footer a {
+    color: #0dcaf0;
+    text-decoration: none;
+  }
+  /* Form section styling */
+  .form-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .gradient-button {
+    background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
+    border: none;
+    color: white;
+  }
+  /* Fixed-height container for scrolling data */
+  .data-output-container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+  }
+  .data-output-container pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
